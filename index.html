@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="index.css">
+
+    <title>ESP32 Gym Equipment Control</title>
+</head>
+
+<body>
+    <header>
+        <h1>ASISTENTE DE GIMNASIO</h1>
+        <p>Bluetooth: <span id="status">Desconectado</span></p>
+        <button class="conectar" onclick="connect()">Conectar</button> <!-- Boton que controla la conexion --> 
+    </header>
+    
+    <main>
+        <h3>AJUSTAR VALORES</h3>
+
+        <div class="values">
+            <p>Altura: <span id="altura">--</span> cm</p>
+
+            <div class="botones">
+                <button onclick="Altura(2)">+</button>     <!-- Boton que controla la escritura de la caracteristica -->
+                                                            <!-- para aumentar variable "altura" --> 
+
+                <button onclick="Altura(-2)">-</button>    <!-- Boton que controla la escritura de la caracteristica -->
+                                                            <!-- para disminuir variable "altura" -->
+            </div>
+        </div>
+
+        <div class="values">
+            <p>Repeticiones: <span id="repeticiones">--</span></p>
+
+            <div class="botones">
+                <button onclick="Repeticiones(1)">+</button>    <!-- Boton que controla la escritura de la caracteristica -->
+                                                                <!-- para aumentar variable "repeticiones" -->
+
+                <button onclick="Repeticiones(-1)">-</button>   <!-- Boton que controla la escritura de la caracteristica -->
+                                                                <!-- para disminuir variable "repeticiones" -->
+            </div>
+        </div>
+
+        <div class="values">
+            <p>Serie: <span id="serie">--</span></p>
+
+            <div class="botones">
+                <button onclick="Serie(true)">+</button>    <!-- Boton que controla la escritura de la caracteristica -->
+                                                            <!-- para cambiar variable serie a positiva -->
+
+                <button onclick="Serie(false)">-</button>   <!-- Boton que controla la escritura de la caracteristica -->
+                                                            <!-- para cambiar variable serie a negativa -->
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h3>PANEL</h3>
+            <pre id="debug"></pre>
+        </div>
+    </main>
+
+    <footer>
+        ESP32 Gym Project - Powered by Web Bluetooth
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

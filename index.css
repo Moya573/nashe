@@ -1,0 +1,127 @@
+/*  Estilizado de la pagina */
+body {
+    touch-action: manipulation;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #e7e7e7;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    padding: 20px;
+    width: 90%;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header > h1{
+    font-size: 30px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    padding: 20px;
+    width: 90%;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+main .values{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+main .values .botones{
+    margin-left: auto;
+}
+
+main .panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+}
+
+/* Botones */
+button {
+    background-color: #2ea332;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #259429;
+}
+
+/* Información de depuración */
+#debug {
+    text-align: left;
+    white-space: pre-wrap;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 150px;
+    width: 300px;
+    overflow-y: auto;
+    font-size: 0.9em;
+    margin-top: 0px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 90%;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 768px){
+    header, main, footer{
+        width: 30%;
+    }
+}
